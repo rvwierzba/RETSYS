@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{689E3842-E9B6-4C2D-B321-3587797D8AAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RETSYS</RootNamespace>
+    <AssemblyName>RETSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\RETSYS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.webting.com.br</SupportUrl>
+    <ErrorReportUrl>http://www.webting.com.br</ErrorReportUrl>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>RETSYS</ProductName>
+    <PublisherName>WEBTING</PublisherName>
+    <SuiteName>RETSYS by WEBTING</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RETSYS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>assets\icon-retsys.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>566CE7DED98B5CC41B40D274884D23E62CD4A9C7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RETSYS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.2.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SolucaoModelo\Setup\bin\Debug\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ViaCep, Version=3.2.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ViaCep.3.2.19\lib\netstandard2.0\ViaCep.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cad_Armacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_Armacao.Designer.cs">
+      <DependentUpon>Cad_Armacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cad_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_Cliente.Designer.cs">
+      <DependentUpon>Cad_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cad_Os.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_Os.Designer.cs">
+      <DependentUpon>Cad_Os.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cad_Pgtos_A_Receber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_Pgtos_A_Receber.Designer.cs">
+      <DependentUpon>Cad_Pgtos_A_Receber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cad_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_Usuario.Designer.cs">
+      <DependentUpon>Cad_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data\Acesso_FB.cs" />
+    <Compile Include="data\dto\Armacao.cs" />
+    <Compile Include="data\dto\Armacao_Venda.cs" />
+    <Compile Include="data\dto\Cliente.cs" />
+    <Compile Include="data\dto\Os.cs" />
+    <Compile Include="data\dto\Pagamento.cs" />
+    <Compile Include="data\dto\Pagamento_A_Receber.cs" />
+    <Compile Include="data\dto\Usuario.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamentos_Feitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagamentos_Feitos.Designer.cs">
+      <DependentUpon>Pagamentos_Feitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Select_Armacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Armacao.Designer.cs">
+      <DependentUpon>Select_Armacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Client.Designer.cs">
+      <DependentUpon>Select_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Os.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Os.Designer.cs">
+      <DependentUpon>Select_Os.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Pgto_A_Receb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Pgto_A_Receb.Designer.cs">
+      <DependentUpon>Select_Pgto_A_Receb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Qual_Pgto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Qual_Pgto.Designer.cs">
+      <DependentUpon>Select_Qual_Pgto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Usuario.Designer.cs">
+      <DependentUpon>Select_Usuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cad_Armacao.resx">
+      <DependentUpon>Cad_Armacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cad_Cliente.resx">
+      <DependentUpon>Cad_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cad_Os.resx">
+      <DependentUpon>Cad_Os.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cad_Pgtos_A_Receber.resx">
+      <DependentUpon>Cad_Pgtos_A_Receber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cad_Usuario.resx">
+      <DependentUpon>Cad_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagamentos_Feitos.resx">
+      <DependentUpon>Pagamentos_Feitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Select_Armacao.resx">
+      <DependentUpon>Select_Armacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Client.resx">
+      <DependentUpon>Select_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Os.resx">
+      <DependentUpon>Select_Os.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Pgto_A_Receb.resx">
+      <DependentUpon>Select_Pgto_A_Receb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Qual_Pgto.resx">
+      <DependentUpon>Select_Qual_Pgto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Usuario.resx">
+      <DependentUpon>Select_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="data\RETSYS.FDB" />
+    <None Include="packages.config" />
+    <None Include="data\DataSources\FirebirdSql.Data.Client.Native.IFbClient.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbCommand.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbCommandBuilder.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbConnection.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbConnectionStringBuilder.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbDataAdapter.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbDatabaseInfo.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbDataReader.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbError.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbErrorCollection.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbException.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbInfoMessageEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbInfoMessageEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbParameter.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbParameterCollection.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbProviderManifest.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbProviderServices.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRemoteEvent.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRemoteEventEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRemoteEventEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRowUpdatedEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRowUpdatedEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRowUpdatingEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbRowUpdatingEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbTransaction.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FbTransactionOptions.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FirebirdClientFactory.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FirebirdClientPermission.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.FirebirdClient.FirebirdClientPermissionAttribute.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.CommandExecutedEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.CommandExecutedEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.CommandExecutingEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.CommandExecutingEventHandler.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.FbBatchExecution.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.FbScript.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.FbStatementCollection.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Isql.StringParser.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Server.FbResultSet.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Server.FbTriggerContext.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbBackup.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbBackupFile.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbBackupFileCollection.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbConfiguration.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbDatabasesInfo.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbLog.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbRestore.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbSecurity.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbServerConfig.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbServerProperties.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbService.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbStatistical.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbUserData.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.FbValidation.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.ServiceOutputEventArgs.datasource" />
+    <None Include="data\DataSources\FirebirdSql.Data.Services.ServiceOutputEventHandler.datasource" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RETSYS_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\logo-webting.png" />
+    <Content Include="assets\minimize.png" />
+    <None Include="assets\RETSYS-COMERCIAL_VERSION.png" />
+    <Content Include="assets\user.png" />
+    <Content Include="assets\x_icon.png" />
+    <Content Include="data\FirebirdSql.Data.FirebirdClient.dll" />
+    <Content Include="assets\icon-retsys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="data\FirebirdSql.Data.FirebirdClient.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="RETSYS.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
